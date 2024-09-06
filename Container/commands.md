@@ -1,3 +1,3 @@
-## Features
-- Feature 1: Brief explanation
-- Feature 2: Brief explanation
+
+
+list all the Docker images on your local machine
