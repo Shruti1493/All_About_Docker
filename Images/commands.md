@@ -19,3 +19,7 @@ docker pull nginx
 docker pull mysql:8.0
 ``` 
 
+#### Pulling from a different registry: By default, Docker pulls images from Docker Hub, but you can also pull images from other registries (e.g., AWS ECR, GCR, or private registries) by specifying the full registry URL.
+```bash
+docker pull myregistry.com/myimage:mytag
+```
