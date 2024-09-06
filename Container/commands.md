@@ -24,6 +24,17 @@ docker run -d -e MY_ENV_VAR=value IMAGE
 ```
 This sets an environment variable MY_ENV_VAR inside the container.
 
+
+- Example
+
+```bash
+docker run --name my-mysql-container -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
+```
+`-e MYSQL_ROOT_PASSWORD=my-secret-pw`: Sets an environment variable inside the container (in this case, the MySQL root password).
+`mysql`: The image name for MySQL.
+
+
+
 - **Run a Container and Automatically Remove It After Exit**
 ```bash
 docker run --rm IMAGE
