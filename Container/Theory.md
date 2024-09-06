@@ -37,3 +37,53 @@ services:
     environment:
       POSTGRES_USER: example
       POSTGRES_PASSWORD: example
+```
+
+# Docker Daemon (dockerd)
+
+## What is Docker Daemon?
+The Docker Daemon (also called `dockerd`) is the background service responsible for managing Docker containers on your host machine. It performs all the heavy lifting involved in building, running, and managing containers, as well as handling images, networks, and volumes.
+
+---
+
+## Key Responsibilities of Docker Daemon:
+
+1. **Container Management:**  
+   The Docker Daemon manages the entire lifecycle of Docker containers, including starting, stopping, and deleting them.
+
+2. **Image Management:**  
+   It pulls container images from registries (like Docker Hub), builds images from Dockerfiles, and manages the layers of container images.
+
+3. **Networking:**  
+   It configures and provides container networking, enabling communication between containers. It also handles the creation of Docker networks.
+
+4. **Volume Management:**  
+   Docker Daemon manages persistent storage volumes that can be attached to containers, ensuring data is not lost even when containers stop.
+
+5. **REST API:**  
+   The Daemon exposes a REST API, which the Docker CLI (Command Line Interface) and other tools use to interact with Docker. When you issue a Docker command, it communicates with the Daemon to execute the action.
+
+---
+
+## Docker Daemon vs. Docker Client:
+
+- **Docker Client (CLI):**  
+  The Docker Client is the tool you use to interact with Docker by typing commands such as `docker run`, `docker build`, and others.
+
+- **Docker Daemon:**  
+  The Docker Daemon is the engine running in the background that processes requests from the Docker Client and executes the necessary tasks.
+
+---
+
+## How It Works:
+1. You issue a command using the Docker CLI, such as `docker run my_image`.
+2. The Docker Client sends this request to the Docker Daemon.
+3. The Daemon checks if the image exists locally, pulls it from a registry if necessary, creates a container, and runs it based on the provided parameters.
+4. The Daemon continuously manages the container until instructed to stop or remove it.
+
+---
+
+## Example Workflow:
+```bash
+# Example command to run a container using Docker CLI:
+docker run hello-world
