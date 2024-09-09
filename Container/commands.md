@@ -119,10 +119,10 @@ docker kill CONTAINER
 ```
 
 ### docker wait
-The kill command sends a SIGKILL signal to a container, immediately terminating it without giving the process time to clean up.
+The wait command blocks until a container stops, then prints the container’s exit code
 
 ```bash
-docker kill CONTAINER
+docker wait CONTAINER
 ```
 
 ### docker pause
