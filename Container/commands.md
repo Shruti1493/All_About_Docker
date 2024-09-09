@@ -87,3 +87,55 @@ docker start f0de0b3f73bf
 ```bash
 docker exec -it f0de0b3f73bf /bin/bash
 ```
+
+### Rename Container 
+```bash
+docker rename ID newName
+```
+
+### Restart Container 
+```bash
+docker restart ID
+```
+
+### The docker attach command allows you to attach your terminal's standard input, output, and error streams to a running container. This is useful when you want to interact with a running container, observe its output in real-time, or provide input to it.
+
+```bash
+docker attach ID
+```
+
+### docker stop
+The stop command gracefully stops a running container by sending a SIGTERM signal to the main process, allowing it time to shut down. If the process doesn't stop within a default time (10 seconds), it sends a SIGKILL to forcefully stop it.
+
+```bash
+docker stop [OPTIONS] CONTAINER
+```
+
+### docker kill
+The kill command sends a SIGKILL signal to a container, immediately terminating it without giving the process time to clean up.
+
+```bash
+docker kill CONTAINER
+```
+
+### docker wait
+The kill command sends a SIGKILL signal to a container, immediately terminating it without giving the process time to clean up.
+
+```bash
+docker kill CONTAINER
+```
+
+### docker pause
+The pause command suspends all processes in a container using the cgroups freezer to stop the processes without terminating them.
+
+```bash
+docker pause CONTAINER
+```
+
+
+### docker unpause
+This command resumes the processes in a container that were paused using the pause command.
+
+```bash
+docker unpause CONTAINER
+```
