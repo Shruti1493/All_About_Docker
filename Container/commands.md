@@ -105,28 +105,28 @@ docker attach ID
 ```
 
 ### docker stop
-The stop command gracefully stops a running container by sending a SIGTERM signal to the main process, allowing it time to shut down. If the process doesn't stop within a default time (10 seconds), it sends a SIGKILL to forcefully stop it.
+- The stop command gracefully stops a running container by sending a SIGTERM signal to the main process, allowing it time to shut down. If the process doesn't stop within a default time (10 seconds), it sends a SIGKILL to forcefully stop it.
 
 ```bash
 docker stop [OPTIONS] CONTAINER
 ```
 
 ### docker kill
-The kill command sends a SIGKILL signal to a container, immediately terminating it without giving the process time to clean up.
+- The kill command sends a SIGKILL signal to a container, immediately terminating it without giving the process time to clean up.
 
 ```bash
 docker kill CONTAINER
 ```
 
 ### docker wait
-The wait command blocks until a container stops, then prints the container’s exit code
+- The wait command blocks until a container stops, then prints the container’s exit code
 
 ```bash
 docker wait CONTAINER
 ```
 
 ### docker pause
-The pause command suspends all processes in a container using the cgroups freezer to stop the processes without terminating them.
+- The pause command suspends all processes in a container using the cgroups freezer to stop the processes without terminating them.
 
 ```bash
 docker pause CONTAINER
@@ -134,20 +134,20 @@ docker pause CONTAINER
 
 
 ### docker unpause
-This command resumes the processes in a container that were paused using the pause command.
+- This command resumes the processes in a container that were paused using the pause command.
 
 ```bash
 docker unpause CONTAINER
 ```
 
 ### docker diff
-The docker diff command is used to inspect changes made to a container's filesystem compared to the base image it was created from. It shows which files have been added, deleted, or modified within the container.
+- The docker diff command is used to inspect changes made to a container's filesystem compared to the base image it was created from. It shows which files have been added, deleted, or modified within the container.
 ```bash
 docker diff CONTAINER
 ```
-A : File or directory was added.
-D : File or directory was deleted.
-C : File or directory was changed.
+- A : File or directory was added.
+- D : File or directory was deleted.
+- C : File or directory was changed.
 
 ### docker create
 the docker create command is used to create a new container without starting it immediately. This can be useful when you want to set up a container, configure it, and start it later.
