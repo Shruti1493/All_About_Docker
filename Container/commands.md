@@ -139,3 +139,26 @@ This command resumes the processes in a container that were paused using the pau
 ```bash
 docker unpause CONTAINER
 ```
+
+### docker diff
+The docker diff command is used to inspect changes made to a container's filesystem compared to the base image it was created from. It shows which files have been added, deleted, or modified within the container.
+```bash
+docker diff CONTAINER
+```
+A : File or directory was added.
+D : File or directory was deleted.
+C : File or directory was changed.
+
+### docker create
+the docker create command is used to create a new container without starting it immediately. This can be useful when you want to set up a container, configure it, and start it later.
+
+```bash
+docker create ubuntu
+```
+
+### Starting a Created Container:
+After creating a container, you can start it using:
+
+```bash
+docker start my_container
+```
